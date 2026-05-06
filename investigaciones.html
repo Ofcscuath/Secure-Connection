@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investigación - Conexión Segura</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0a0a0f;
+    color:white;
+}
+
+/* FONDO */
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    background: radial-gradient(circle,#00f0ff22,#000 70%);
+    animation:mover 12s infinite alternate;
+    z-index:-1;
+}
+
+@keyframes mover{
+    0%{transform:translate(-20%,-20%);}
+    100%{transform:translate(0,0);}
+}
+
+/* NAVBAR */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    color:#00f0ff;
+    font-size:1.6rem;
+    font-weight:700;
+    text-shadow:0 0 10px #00f0ff;
+}
+
+.menu{
+    display:flex;
+    gap:20px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    position:relative;
+}
+
+.menu a::after{
+    content:"";
+    width:0;
+    height:2px;
+    background:#00f0ff;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+.menu a:hover::after{
+    width:100%;
+}
+
+/* HAMBURGUESA */
+.hamburguesa{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* PORTADA */
+.portada{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.portada h1{
+    font-size:2.8rem;
+    color:#00f0ff;
+    text-shadow:0 0 20px #00f0ff;
+}
+
+.portada p{
+    margin-top:15px;
+    max-width:700px;
+    opacity:0.8;
+}
+
+/* BOTÓN */
+.btn{
+    margin-top:25px;
+    padding:12px 25px;
+    border:none;
+    background:#00f0ff;
+    color:black;
+    border-radius:25px;
+    cursor:pointer;
+    box-shadow:0 0 15px #00f0ff;
+}
+
+/* CONTENIDO */
+.container{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    gap:30px;
+    padding:40px;
+}
+
+/* ÍNDICE */
+.indice{
+    position:sticky;
+    top:100px;
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:10px;
+}
+
+.indice h3{
+    color:#00f0ff;
+    margin-bottom:10px;
+}
+
+.indice a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin:8px 0;
+    font-size:0.9rem;
+}
+
+/* CONTENIDO TEXTO */
+.contenido section{
+    margin-bottom:40px;
+}
+
+.contenido h2{
+    color:#00f0ff;
+    margin-bottom:10px;
+}
+
+.contenido p{
+    line-height:1.6;
+    opacity:0.85;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    margin-top:40px;
+    opacity:0.7;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .indice{
+        position:relative;
+        top:0;
+    }
+}
+
+@media(max-width:768px){
+    .menu{
+        position:absolute;
+        top:70px;
+        right:0;
+        background:#000;
+        flex-direction:column;
+        width:200px;
+        padding:20px;
+        display:none;
+    }
+
+    .menu.active{
+        display:flex;
+    }
+
+    .hamburguesa{
+        display:block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Conexión Segura</div>
+    <div class="hamburguesa" onclick="toggleMenu()">☰</div>
+    <nav class="menu" id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="integrantes.html">Integrantes</a>
+        <a href="videos.html">Videos</a>
+        <a href="cuento.html">Cuentos</a>
+        <a href="investigaciones.html">Investigación</a>
+    </nav>
+</header>
+
+<!-- PORTADA -->
+<div class="portada">
+    <h1>Educación sexual y su impacto en la prevención de ETS y embarazo en adolescentes</h1>
+    <p>Trabajo de investigación desarrollado por estudiantes normalistas del 12°H.</p>
+<a href="investigacion.pdf" download>
+    <button class="btn">Descargar PDF</button>
+</a> 
+</div>
+
+<!-- CONTENIDO -->
+<div class="container">
+
+    <!-- ÍNDICE -->
+    <div class="indice">
+        <h3>Índice</h3>
+        <a href="#resumen">Resumen</a>
+        <a href="#introduccion">Introducción</a>
+        <a href="#marco">Marco Teórico</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#conclusion">Conclusión</a>
+    </div>
+
+    <!-- TEXTO -->
+    <div class="contenido">
+
+        <section id="resumen">
+            <h2>Resumen</h2>
+            <p>Resumen de tu investigación... Próximo</p>
+        </section>
+
+        <section id="introduccion">
+            <h2>Introducción</h2>
+            <p>Introducción de tu trabajo...</p>
+        </section>
+
+        <section id="marco">
+            <h2>Marco Teórico</h2>
+            <p>Desarrollo de marco teórico...</p>
+        </section>
+
+        <section id="metodologia">
+            <h2>Metodología</h2>
+            <p>Realización de la investigación...</p>
+        </section>
+
+        <section id="resultados">
+            <h2>Resultados</h2>
+            <p>Resultados obtenidos...</p>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusión</h2>
+            <p>Conclusiones finales del estudio...</p>
+        </section>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Conexión Segura - Todos los derechos reservados
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
