@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Conexión Segura | ETS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#050510;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* FONDO */
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:radial-gradient(circle,#00f0ff22,#000000 70%);
+    animation:mover 12s infinite alternate;
+    z-index:-1;
+}
+
+@keyframes mover{
+    0%{transform:translate(-15%,-15%);}
+    100%{transform:translate(0%,0%);}
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:rgba(0,0,0,0.5);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:bold;
+    color:#00f0ff;
+    text-shadow:0 0 15px #00f0ff;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+    position:relative;
+}
+
+.menu a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:#00f0ff;
+    transition:0.3s;
+}
+
+.menu a:hover::after{
+    width:100%;
+}
+
+.menu a:hover{
+    color:#00f0ff;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:#00f0ff;
+    text-shadow:0 0 20px #00f0ff;
+}
+
+.hero p{
+    max-width:850px;
+    margin-top:20px;
+    font-size:1.1rem;
+    line-height:1.9;
+    opacity:0.9;
+}
+
+/* BOTÓN */
+.btn{
+    margin-top:30px;
+    padding:14px 35px;
+    background:#00f0ff;
+    color:black;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:bold;
+    box-shadow:0 0 20px #00f0ff;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 35px #00f0ff;
+}
+
+/* SECCIONES */
+section{
+    padding:90px 20px;
+    text-align:center;
+}
+
+section h2{
+    color:#00f0ff;
+    font-size:2.5rem;
+    margin-bottom:25px;
+    text-shadow:0 0 10px #00f0ff;
+}
+
+section p{
+    max-width:1000px;
+    margin:auto;
+    line-height:1.9;
+    margin-bottom:20px;
+    opacity:0.9;
+}
+
+/* TARJETAS */
+.contenedor{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:25px;
+    backdrop-filter:blur(10px);
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(0,240,255,0.2);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00f0ff;
+}
+
+.card h3{
+    color:#00f0ff;
+    margin-bottom:15px;
+    font-size:1.4rem;
+}
+
+/* IMAGEN */
+.imagen{
+    text-align:center;
+    margin-top:40px;
+}
+
+.imagen img{
+    width:90%;
+    max-width:900px;
+    border-radius:20px;
+    box-shadow:0 0 30px #00f0ff;
+}
+
+/* FOOTER */
+footer{
+    background:black;
+    text-align:center;
+    padding:30px;
+    opacity:0.8;
+    margin-top:50px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.8rem;
+}
+
+.menu{
+    gap:12px;
+    font-size:0.9rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Conexión Segura</div>
+
+<nav class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="#ets">ETS</a>
+    <a href="#riesgos">Riesgos</a>
+    <a href="#enfermedades">Enfermedades</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>Enfermedades de Transmisión Sexual</h1>
+
+<p>
+La educación sexual responsable es esencial para proteger la salud y el bienestar
+de los jóvenes. Las enfermedades de transmisión sexual pueden afectar tanto la salud
+física como emocional, por lo que conocer sus riesgos, síntomas y métodos de prevención
+es fundamental para construir un futuro saludable y seguro.
+</p>
+
+<a href="#ets" class="btn">Explorar Información</a>
+
+</div>
+
+<!-- ETS -->
+
+<section id="ets">
+
+<h2>¿Qué son las ETS?</h2>
+
+<p>
+Las Enfermedades de Transmisión Sexual (ETS) son infecciones que se transmiten
+principalmente mediante relaciones sexuales sin protección. Estas infecciones pueden
+ser causadas por bacterias, virus, hongos o parásitos.
+</p>
+
+<p>
+Las ETS pueden contagiarse durante relaciones sexuales vaginales, orales o anales.
+Algunas también se transmiten por sangre contaminada o de madre a hijo durante el embarazo.
+</p>
+
+<p>
+Muchas personas pueden estar infectadas sin presentar síntomas, lo que facilita
+su propagación. Por esta razón, la prevención y los chequeos médicos son muy importantes.
+</p>
+
+<div class="contenedor">
+
+<div class="card">
+<h3>¿Cómo se transmiten?</h3>
+
+<p>
+• Relaciones sexuales sin protección. <br><br>
+• Contacto con sangre infectada. <br><br>
+• Compartir agujas contaminadas. <br><br>
+• De madre a hijo durante el embarazo o parto.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Síntomas frecuentes</h3>
+
+<p>
+• Ardor al orinar. <br><br>
+• Picazón o irritación. <br><br>
+• Llagas o verrugas. <br><br>
+• Fiebre y cansancio. <br><br>
+• Dolor durante relaciones sexuales.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Prevención</h3>
+
+<p>
+El uso correcto del preservativo, la educación sexual responsable,
+la comunicación y las pruebas médicas ayudan a prevenir las ETS.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMPACTO -->
+
+<section>
+
+<h2>¿Cómo afectan las ETS a los jóvenes?</h2>
+
+<p>
+Los adolescentes y jóvenes son uno de los grupos más vulnerables debido
+a la falta de información, presión social y toma de decisiones impulsivas.
+</p>
+
+<p>
+Las ETS pueden afectar la autoestima, generar miedo, ansiedad y provocar
+problemas de salud graves cuando no se tratan a tiempo.
+</p>
+
+<div class="contenedor">
+
+<div class="card">
+
+<h3>Problemas físicos</h3>
+
+<p>
+Algunas ETS pueden causar infertilidad,
+daños en órganos, enfermedades crónicas
+y debilitamiento del sistema inmunológico.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Impacto emocional</h3>
+
+<p>
+Las personas infectadas pueden experimentar
+estrés, depresión, vergüenza o temor
+al rechazo social.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Impacto social</h3>
+
+<p>
+La desinformación puede provocar discriminación,
+aislamiento y dificultades en las relaciones personales.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FACTORES DE RIESGO -->
+
+<section id="riesgos">
+
+<h2>Factores de Riesgo</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<h3>Falta de información</h3>
+
+<p>
+Muchas personas desconocen cómo se transmiten
+las ETS y cómo prevenirlas correctamente.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Relaciones sin protección</h3>
+
+<p>
+No utilizar preservativos aumenta considerablemente
+el riesgo de infección.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Múltiples parejas</h3>
+
+<p>
+Tener varias parejas sexuales incrementa
+la probabilidad de contagio.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Presión social</h3>
+
+<p>
+La presión de amistades o redes sociales
+puede influir en decisiones irresponsables.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Consumo de alcohol o drogas</h3>
+
+<p>
+Estas sustancias afectan la capacidad
+de tomar decisiones seguras.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Falta de controles médicos</h3>
+
+<p>
+No realizar pruebas médicas impide detectar
+las infecciones a tiempo.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ENFERMEDADES -->
+
+<section id="enfermedades">
+
+<h2>Enfermedades Importantes</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<h3>Sífilis</h3>
+
+<p>
+La sífilis es una infección bacteriana causada por la bacteria
+<i>Treponema pallidum</i>.
+</p>
+
+<p>
+Comienza normalmente con una llaga pequeña e indolora llamada chancro.
+Si no se trata, puede afectar el corazón, cerebro y sistema nervioso.
+</p>
+
+<p>
+Dato importante:
+La sífilis puede curarse completamente con antibióticos
+si se detecta a tiempo.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Escabiosis</h3>
+
+<p>
+La escabiosis o sarna es una enfermedad de la piel
+causada por pequeños ácaros microscópicos.
+</p>
+
+<p>
+Produce picazón intensa, irritación y pequeñas lesiones en la piel.
+Puede transmitirse mediante contacto físico cercano.
+</p>
+
+<p>
+Dato importante:
+La higiene y el tratamiento rápido ayudan a evitar su propagación.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Hepatitis C</h3>
+
+<p>
+La hepatitis C es una enfermedad viral que afecta principalmente el hígado.
+Muchas personas pueden estar infectadas sin saberlo.
+</p>
+
+<p>
+Puede provocar cirrosis, insuficiencia hepática
+y cáncer de hígado.
+</p>
+
+<p>
+Dato importante:
+La detección temprana ayuda a prevenir daños graves en el organismo.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DATOS IMPORTANTES -->
+
+<section>
+
+<h2>Datos Importantes que Debemos Conocer</h2>
+
+<p>
+• Algunas ETS pueden permanecer ocultas durante años sin síntomas visibles.
+</p>
+
+<p>
+• El preservativo es uno de los métodos más efectivos de prevención.
+</p>
+
+<p>
+• Hablar sobre educación sexual ayuda a prevenir enfermedades y embarazos tempranos.
+</p>
+
+<p>
+• Las pruebas médicas periódicas son importantes para detectar infecciones a tiempo.
+</p>
+
+<p>
+• Buscar ayuda médica rápida puede evitar complicaciones graves.
+</p>
+
+<p>
+• La información correcta salva vidas y ayuda a tomar decisiones responsables.
+</p>
+
+<div class="imagen">
+
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200&auto=format&fit=crop" alt="Salud y prevención">
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Conexión Segura - Educación y Prevención
+
+<p>
+Escuela Normal Juan Demóstenes Arosemena
+</p>
+
+<p>
+Página desarrollada por Allan Araúz y equipo de trabajo.
+</p>
+
+</footer>
+
+</body>
+</html>
